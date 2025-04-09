@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تفاصيل الأجنحة</title>
+  <link rel="stylesheet" href="css/service.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .suites-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #004d40;
+    }
+
+    .suite-card {
+      width: 250px;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .suite-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .suite-btn {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .suite-btn:hover {
+      background-color: #004d40;
+    }
+
+    .details-section {
+      padding: 60px 20px;
+      background-color: white;
+    }
+
+    .details-card {
+      max-width: 900px;
+      margin: auto;
+      background-color: #e0f2f1;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 60px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .details-card h2 {
+      margin-top: 0;
+      color: #00695c;
+    }
+
+    .details-card p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .price {
+      font-size: 22px;
+      color: #d32f2f;
+      margin: 10px 0;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebc59;
+    }
+
+    @media (max-width: 768px) {
+      .suite-card {
+        width: 100%;
+      }
+
+      .details-card {
+        padding: 20px;
+      }
+    }
+
+
+    .suite-gallery{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .suite-gallery img{
+      width: 30%;
+      border-radius: 20px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    }
+    .suite-gallery img:hover{
+      transform: rotateY(10deg) rotateX(10deg);
+      box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.5);
+
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="/" class="logo"> <img src="./image/images/logot.png" alt="" loading="lazy"> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="/" class="nav-link">الصفحة الرئيسية</a> </li>
+          <li> <a href="/#services" class="nav-link">خدماتنا</a> </li>
+          <li> <a href="./gallery.html" class="nav-link">الصور</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+  <!-- القائمة الرئيسية -->
+
+
+  <!-- التفاصيل -->
+  <section class="details-section">
+    <div id="suite1" class="details-card">
+      <h2>غرفتين وصالة حوش ومسبح</h2> <p>استمتع بتجربة إقامة فريدة في *منازل الشفا لبيوت العطلات*، حيث الهدوء يلتقي بالفخامة. هذا الجناح الرائع يضم غرفتي نوم أنيقتين، صالة معيشة واسعة، ومطبخ مجهز بكل ما تحتاجه لقضاء عطلة مريحة. كما يحتوي على دورة مياه خاصة، وبلكونة تطل على حديقة خلابة تمنحك لحظات من الصفاء.<br> ولمزيد من التميّز، يوفر لك الحوش الخصوصية التامة مع مسبح خاص يضفي لمسة من الرفاهية على إقامتك. خيار مثالي لمن يبحث عن الراحة والاستجمام في قلب مدينة الشفا بالطائف.</p>
+            
+      <div class="suite-gallery">
+
+
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="background-video">
+            <source src="./image/tow rooms/video_2025-04-09_19-17-44.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        </div>
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="background-video">
+            <source src="./image/tow rooms/video_2025-04-09_19-17-56.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        </div>
+
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="background-video">
+            <source src="./image/tow rooms/video_2025-04-09_19-17-25.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        </div>
+        <img src="./image/tow rooms/photo_2025-04-07_19-42-08.jpg" alt="">
+        <img src="./image/tow rooms/photo_2025-04-09_19-17-35.jpg" alt="">
+        <img src="./image/tow rooms/photo_2025-04-09_19-17-40.jpg" alt="">
+        <img src="./image/tow rooms/photo_2025-04-09_19-17-49.jpg" alt="">
+        <img src="./image/tow rooms/photo_2025-04-09_19-17-52.jpg" alt="">
+        <img src="./image/tow rooms/photo_2025-04-09_19-18-05.jpg" alt="">
+        <img src="./image/tow rooms/photo_2025-04-09_19-19-20.jpg" alt="">
+
+
+
+    </div>
+    <div class="price"> الأيام العادية 1300  ريال</div>
+    <div class="price"> المواسم والعطلات 1800   ريال</div>
+
+      <a href="https://wsend.co/966533060327" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
+
+    <div id="suite2" class="details-card">
+      <h2>غرفة وصالة وحوش</h2> <p>دلّل نفسك بإقامة هادئة ومريحة في *منازل الشفا لبيوت العطلات*. هذا الجناح الأنيق يضم غرفة نوم مريحة، صالة معيشة رحبة للاسترخاء، ومطبخ مجهز بكل الأساسيات التي تحتاجها لإقامة ممتعة. يتميّز الجناح بحوش خاص يوفر لك ولعائلتك مساحة مثالية للاستمتاع بالهواء الطلق والخصوصية، بالإضافة إلى دورة مياة خارجية لراحة إضافية. الخيار الأمثل لمن يبحث عن أجواء دافئة وخصوصية في قلب الشفا.</p>
+            
+      <div class="suite-gallery">
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="background-video">
+            <source src="./image/one room/video_2025-04-09_19-19-38.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        </div>
+
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="background-video">
+            <source src="./image/one room/video_2025-04-09_19-19-51.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        </div>
+        <img src="./image/one room/photo_2025-04-07_19-43-01.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-19-57.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-20-03.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-20-06.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-20-10.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-20-13.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-20-20.jpg" alt="">
+
+
+    </div>
+    <div class="price"> الأيام العادية 800  ريال</div>
+    <div class="price"> المواسم والعطلات 1200   ريال</div>      <a href="https://wsend.co/966533060327" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
+
+    <div id="suite5" class="details-card">
+      <h2>جناح ذوي الهمم</h2>
+      <p>استمتع بإقامة فاخرة مصممة خصيصاً لتلبية احتياجاتك، حيث تم تجهيز الجناح بكل وسائل الراحة والرفاهية مع مراعاة تامة للتسهيلات والتجهيزات الخاصة بذوي الهمم لتسهيل الحركة والتنقل. تمت مراعاة توفير مداخل مريحة ودورة مياة إضافية في الحوش مصممة لسهولة الاستخدام، مما يضمن لك أقصى درجات الراحة والخصوصية.</p>
+      
+      <div class="suite-gallery">
+        <img src="./image/one room/photo_2025-04-09_19-20-06.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-20-10.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-20-13.jpg" alt="">
+        <img src="./image/one room/photo_2025-04-09_19-20-20.jpg" alt="">
+
+
+      </div>
+
+      <div class="price"> الأيام العادية 800  ريال</div>
+      <div class="price"> المواسم والعطلات 1200   ريال</div>        <a href="https://wsend.co/966533060327" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
+
+
+
+  </section>
+
+   <!-- Lightbox -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="close-btn">&times;</button>
+  <button class="lightbox-nav prev">&larr;</button>
+  <button class="lightbox-nav next">&rarr;</button>
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lightboxImage" src="" alt="">
+  </div>
+</div>
+<script>
+  // Lightbox Logic
+  let currentImageIndex = 0;
+  let imagesArray = [];
+
+  const lightboxOverlay = document.getElementById('lightboxOverlay');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const closeBtn = document.querySelector('.close-btn');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  // Open Lightbox
+  document.querySelectorAll('.suite-gallery img').forEach(img => {
+    img.addEventListener('click', (e) => {
+      const gallery = Array.from(img.parentElement.children).filter(el => el.tagName === 'IMG');
+      currentImageIndex = gallery.indexOf(img);
+      imagesArray = gallery;
+      updateLightboxImage();
+      lightboxOverlay.style.display = 'flex';
+    });
+  });
+
+  // Update Image
+  function updateLightboxImage() {
+    lightboxImage.src = imagesArray[currentImageIndex].src;
+  }
+
+  // Navigation
+  function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % imagesArray.length;
+    updateLightboxImage();
+  }
+
+  function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + imagesArray.length) % imagesArray.length;
+    updateLightboxImage();
+  }
+
+  // Event Listeners
+  closeBtn.addEventListener('click', () => {
+    lightboxOverlay.style.display = 'none';
+  });
+
+  lightboxOverlay.addEventListener('click', (e) => {
+    if (e.target === lightboxOverlay) {
+      lightboxOverlay.style.display = 'none';
+    }
+  });
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showPrevImage();
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showNextImage();
+  });
+
+  // Keyboard Navigation
+  document.addEventListener('keydown', (e) => {
+    if (lightboxOverlay.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') showPrevImage();
+      if (e.key === 'ArrowRight') showNextImage();
+      if (e.key === 'Escape') lightboxOverlay.style.display = 'none';
+    }
+  });
+
+  // Touch Swipe
+  let touchStartX = 0;
+  lightboxOverlay.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  lightboxOverlay.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diffX = touchStartX - touchEndX;
+
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) showNextImage();
+      else showPrevImage();
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>معرض الفندق</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #444;
+    }
+  </style>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+          <nav>
+            <a href="#" class="logo"> <img src="./image/images/logot.png" alt="" loading="lazy"> </a>
+    
+            <ul class="nav-menu">
+              <li> <a href="./index.html" class="nav-link">الصفحة الرئيسية</a> </li>
+              <li> <a href="./index.html#services" class="nav-link">خدماتنا</a> </li>
+              <li> <a href="./gallery.html" class="nav-link">الصور</a> </li>
+            </ul>
+    
+            <div class="hambuger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <script>
+        const hambuger = document.querySelector('.hambuger');
+        const navMenu = document.querySelector('.nav-menu');
+    
+        hambuger.addEventListener("click", mobileMenu);
+    
+        function mobileMenu() {
+          hambuger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+        }
+    
+        const navLink = document.querySelectorAll('.nav-link');
+        navLink.forEach((n) => n.addEventListener("click", closeMenu));
+    
+        function closeMenu() {
+          hambuger.classList.remove("active");
+          navMenu.classList.remove("active");
+        }
+      </script>
+  <div class="gallery-container">
+    <h2>معرض الفندق</h2>
+    <div class="swiper-container hotel-gallery">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./image/photo_2025-04-07_19-41-56.jpg" alt="صورة 1"></div>
+        <div class="swiper-slide"><img src="./image/photo_2025-04-07_19-42-02.jpg" alt="صورة 2"></div>
+        <div class="swiper-slide"><img src="./image/photo_2025-04-07_19-42-05.jpg" alt="صورة 3"></div>
+        <div class="swiper-slide"><img src="./image/photo_2025-04-07_19-42-11.jpg" alt="صورة 4"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    var swiperGallery = new Swiper('.hotel-gallery', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      autoplay: { delay: 3000 },
+    });
+  </script>
+</body>
+</html>

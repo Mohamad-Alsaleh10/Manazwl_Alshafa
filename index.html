@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <title> منازل الشفا لبيوت العطلات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./image/images/logot.png" type="image/png">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script>
+    function toggleFacilities() {
+      const hiddenFacilities = document.querySelectorAll('.hidden');
+      hiddenFacilities.forEach(facility => {
+        facility.classList.toggle('hidden');
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="./image/logo/logo.png" alt="" loading="lazy"> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#" class="nav-link">الصفحة الرئيسية</a> </li>
+          <li> <a href="#services" class="nav-link">خدماتنا</a> </li>
+          <li> <a href="./gallery.html" class="nav-link">الصور</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>مرحباً بك في منازل الشفا لبيوت العطلات</h1>
+          <p> منازل الشفا للوحدات السكنية الفاخرة في مدينة الشفا بالطائف </p>
+          <button class="book-btn" onclick="scrollToBooking()">احجز الان</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="./image/slides/1.jpg" class="slide" id="mainImage" loading="lazy">
+      </div>
+      <div class="image_item">
+        <img src="./image/slides/1.jpg" alt="" class="slide active" onclick="img('./image/slides/1.jpg', 0)">
+        <img src="./image/slides/2.jpg" alt="" class="slide" onclick="img('./image/slides/2.jpg', 1)">
+        <img src="./image/slides/3.jpg" alt="" class="slide" onclick="img('./image/slides/3.jpg', 2)">
+        <img src="./image/slides/4.jpg" alt="" class="slide" onclick="img('./image/slides/4.jpg', 3)">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let images = [
+      "./image/slides/1.jpg",
+      "./image/slides/2.jpg",
+      "./image/slides/3.jpg",
+      "./image/slides/4.jpg"
+    ];
+
+    let currentIndex = 0;
+    let interval;
+
+    function img(src, index) {
+      document.getElementById("mainImage").src = src;
+      currentIndex = index; // Update index
+      resetInterval(); // Restart auto-slide
+    }
+
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.getElementById("mainImage").src = images[currentIndex];
+    }
+
+    function resetInterval() {
+      clearInterval(interval); // Stop current interval
+      interval = setInterval(autoSlide, 3000); // Restart auto-slide every 3 seconds
+    }
+
+    // Start auto-slide when page loads
+    interval = setInterval(autoSlide, 3000);
+  </script>
+
+
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="./image/photo_2025-04-07_19-42-02.jpg" alt="" class="image1" loading="lazy">
+          <img src="./image/photo_2025-04-07_19-43-16.jpg" alt="" class="image2" loading="lazy">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>رفع مستوى الراحة الى اعلى مستوى</h5>
+          <h2>مرحباَ بك في منازل الشفا للبيوت والعطلات</h2>
+          <p>منازل الشفا للوحدات السكنية الفاخرة في مدينة الشفا بالطائف، يوفر إقامة فاخرة تجمع بين الراحة
+            والخصوصية في أجواء الطبيعية الساحرة. يتكون من أجنحة فاخرة، مما يجعله وجهة مثالية للعائلات. </p>
+            <p>منازل الشفا بأسلوب راقٍ يتسم بالهدوء والفخامة، حيث يتميز بالحدائق الساحرة والاجواء الطبيعية
+            الرائعةً. تتميز الأجنحة بمساحات واسعة وديكورات عصرية، إضافةً إلى الأثاث المريح والإطلالات الرائعة على
+            المناظر الطبيعية المحيطة.</p>
+            <button class="book-btn" onclick="scrollToBooking()">احجز الان</button>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="./image/images/garden/video_2025-03-29_19-35-56.mp4" type="video/mp4">
+      <!-- Fallback image if video can't load -->
+      <img src="image/ami.jpg" alt="Fallback Background">
+    </video>
+  </section>
+
+  <section class="room top" id="room">
+    <div class="">
+      <div class="heading_top container flex1">
+        <div class="heading">
+          <h5>رفع مستوى الراحة الى اعلى مستوى</h5>
+          <h2>الغرف والأجنحة</h2>
+        </div>
+        <div class="button">
+        </div>
+      </div>
+
+      <section class="suites-section">
+        <div class="suite-card">
+          <img src="./image/tow rooms/photo_2025-04-07_19-42-08.jpg" alt=" غرفتين وصاله حوش ومسبح">
+          <a class="suite-btn" href="./service.html#suite1" target="_blank" style="text-align: center;">    غرفتين وصاله حوش ومسبح
+          </a>
+        </div>
+        <div class="suite-card">
+          <img src="./image/one room/photo_2025-04-07_19-43-01.jpg" alt="غرفة وصالة وحوش  ">
+          <a class="suite-btn" href="./service.html#suite2" target="_blank"> غرفة وصالة وحوش 
+          </a>
+
+        </div>
+        <div class="suite-card">
+          <img src="./image/moaken/photo_2025-04-07_19-43-24.jpg" alt="جناح ذوي الهمم">
+          <a  class="suite-btn" href="./service.html#suite5" target="_blank">جناح ذوي الهمم</a>
+        </div>
+
+      </section>
+    </div>
+  </section>
+
+  <!-- start  -->
+  <section class="room top" id="room" >
+    <section class="" id="services">
+      <div class="heading_top container flex1">
+        <div class="heading">
+          <h5>رفع مستوى الراحة الى اعلى مستوى</h5>
+          <h2 > خدماتنا</h2>
+        </div>
+        <div class="button">
+        </div>
+      </div>
+
+      <section class="services">
+        <div class="services-container">
+
+          <div class="service-card">
+            <img src="./image/servecies/cafe.jpeg" alt="كافية">
+            <h3>كافية</h3>
+            <p>استمتع بمجموعة متنوعة من المشروبات كافية منازل الشفا مثالي للاسترخاء.</p>
+          </div>
+          <div class="service-card">
+            <img src="./image/servecies/garden.jpeg" alt=" ">
+            <h3>حديقة</h3>
+            <p>يوجد في منازل الشفا جلسات في حديقة الفندق كما يوجد ايضا حديقة خاصة لبعض الاجنحة</p>
+          </div>
+        
+
+        </div>
+      </section>
+    </section>
+    <!-- end  -->
+
+
+
+    <section class="room top" id="room">
+      <section class="">
+        <div class="heading_top container flex1">
+          <div class="heading">
+            <h5>رفع مستوى الراحة الى اعلى مستوى</h5>
+            <h2> المرافق</h2>
+          </div>
+          <div class="button">
+          </div>
+        </div>
+
+        <section class="facilities-section">
+          <h2 class="facilities-title">المرافق</h2>
+          <p class="facilities-subtitle">المرافق الأكثر شيوعًا في الفندق</p>
+          <div class="facilities-container">
+            <div class="facility-card">
+              <h3>أنشطة خارجية</h3>
+              <p>شرفة</p>
+              <p>جلسات</p>
+              <p>حديقة</p>
+            </div>
+            <div class="facility-card">
+              <h3>غرفة النوم</h3>
+              <p>ساعة منبّهة</p>
+              <p>خزانة</p>
+              <p>بياضات أسرّة</p>
+            </div>
+            <div class="facility-card">
+              <h3>الحمام</h3>
+              <p>ورق حمام</p>
+              <p>مناشف</p>
+              <p>أحذية مخصصة للغرفة</p>
+              <p>حمّام خاص</p>
+              <p>مرحاض</p>
+              <p>لوازم استحمام مجانية</p>
+              <p>مجفف شعر</p>
+              <p>دش</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>الإنترنت</h3>
+              <p>تتوفر خدمة الواي فاي (الإنترنت اللاسلكي) في جميع أنحاء الفندق مجاناً</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>مرافق الغرفة</h3>
+              <p>مقبس بجانب السرير</p>
+              <p>منشر للغسيل</p>
+              <p>حمّالة ملابس</p>
+              <p>بلاط / أرضية رخامية</p>
+              <p>عازل للصوت</p>
+              <p>مرافق كي الملابس</p>
+              <p>مكواة</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>المطبخ</h3>
+              <p>مستحضرات تنظيف</p>
+              <p>ثلاجة</p>
+              <p>أدوات مطبخ</p>
+              <p>غلاية كهربائية</p>
+              <p>غسالة ملابس</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>خدمات ذوي الاحتياجات الخاصة</h3>
+              <p>منحدر للكرسي المتحرك</p>
+              <p>منبه هزاز</p>
+              <p>مقابض مرحاض</p>
+              <p>جرس طوارئ</p>
+              <p>كرسي حمام</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>اللغات المُتحدَث بِها</h3>
+              <p>العربية</p>
+              <p>الإنجليزية</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>خدمات الاستقبال</h3>
+              <p>يمكن طلب فاتورة</p>
+              <p>خزائن</p>
+              <p>تسجيل وصول / مغادرة خاص</p>
+              <p>تسجيل سريع للوصول والمغادرة</p>
+              <p>مكتب استقبال على مدار 24 ساعة</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>الأمان والحماية</h3>
+              <p>طفايات حريق</p>
+              <p>كاميرات مراقبة خارج مكان الإقامة</p>
+              <p>كاميرات مراقبة في المناطق المشتركة</p>
+              <p>أجهزة إنذار الدخان</p>
+              <p>أجهزة إنذار</p>
+              <p>مفاتيح دخول</p>
+              <p>صندوق أمانات</p>
+              <p>مؤمن بالكامل</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>مرافق تنظيف</h3>
+              <p>خدمة تنظيف يومية</p>
+              <p>خدمة كي الملابس</p>
+              <p>مرافق غسيل الملابس</p>
+            </div>
+            <div class="facility-card hidden">
+              <h3>موقف سيارات</h3>
+              <p>موقف للسيارات ملائم لذوي الاحتياجات الخاصة</p>
+            </div>
+          </div>
+          <button class="btn" onclick="toggleFacilities()">عرض جميع المرافق</button>
+        </section>
+
+      </section>
+
+      <section class="wrapper wrapper2 top">
+        <div class="container">
+          <div class="text">
+            <div class="heading">
+              <h5>التقييمات</h5>
+              <h2>اراء الناس</h2>
+            </div>
+
+            <div class="para">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. </p>
+
+              <div class="box flex">
+                <div class="img">
+                  <img src="image/c.jpg" alt="" loading="lazy">
+                </div>
+                <div class="name">
+                  <h5>KATE PALMER</h5>
+                  <h5>IDAHO</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <script>
+        var accItem = document.getElementsByClassName('accordionItem');
+        var accHD = document.getElementsByClassName('accordionIHeading');
+
+        for (i = 0; i < accHD.length; i++) {
+          accHD[i].addEventListener('click', toggleItem, false);
+        }
+
+        function toggleItem() {
+          var itemClass = this.parentNode.className;
+          for (var i = 0; i < accItem.length; i++) {
+            accItem[i].className = 'accordionItem close';
+          }
+          if (itemClass == 'accordionItem close') {
+            this.parentNode.className = 'accordionItem open';
+          }
+        }
+      </script>
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+        integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          dots: false,
+          navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2
+            },
+            1000: {
+              items: 4
+            }
+          }
+        })
+
+
+    function scrollToBooking() {
+      document.getElementById("room").scrollIntoView({ behavior: "smooth" });
+    }
+      </script>
+
+
+
+      <section class="map top">
+
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59568.95820174893!2d40.34699064842267!3d21.070270175324197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e9954e2506181d%3A0xb0d5083e64e5cab9!2z2KfZhNi02YHYpyDYp9mE2LPYudmI2K_Zitip!5e0!3m2!1sar!2snl!4v1743376233277!5m2!1sar!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+
+      <footer class="footer">
+        <div class="container">
+
+          <div class="footer-content">
+            <h3 class="footer-title">تابعنا على</h3>
+            <div class="social-icons">
+              <a href="https://www.tiktok.com/@alshafa_houses?_t=8nttlwyvcod&_r=1" target="_blank" class="social-link">
+                <img src="./image/icon/tictok.png" alt="tiktok">
+              </a>
+              <a href="https://tr.ee/PAY7IJP9Yj" target="_blank" class="social-link">
+                <img src="./image/icon/snap.png" alt="Snapchat">
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="footer-rights">جميع الحقوق محفوظة © 2025 Royaatek</p>
+      </footer>
+
+
+      <a href="https://wsend.co/966533060327" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> احجز عبر واتساب
+      </a>
+</body>
+
+</html>
