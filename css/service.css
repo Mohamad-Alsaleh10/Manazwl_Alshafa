@@ -42,7 +42,7 @@ li {
   
 /*--------------header--------*/
 header {
-    height: 13vh;
+  height: 16vh;
     background: white;
     color: black;
     position: sticky;
@@ -97,6 +97,9 @@ header {
     color: #C1B086;
   }
   @media only screen and (max-width: 768px) {
+    .header{
+      height: 12vh;
+    }
     header ul {
       display: block;
       position: fixed;
