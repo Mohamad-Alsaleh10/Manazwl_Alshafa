@@ -84,7 +84,7 @@ header ul li a {
 }
 
 header ul li a:hover {
-  color: #C1B086;
+  color: #2196f36b;
 }
 .services {
   padding: 50px 20px;
@@ -359,7 +359,7 @@ input {
   content: '';
   width: 100px;
   height: 4px;
-  background: #C1B086;
+  background: #2196f36b;
 }
 
 .heading h5 {
@@ -388,7 +388,7 @@ input {
 }
 
 .btn1 {
-  background: #C1B086;
+  background: #2196f36b;
   color: white;
 }
 
@@ -554,7 +554,7 @@ input {
   border-radius: 3px;
   font-weight: 400;
   font-size: 17px;
-  color: #C1B086;
+  color: #2196f36b;
   margin-bottom: 20px;
 }
 
@@ -608,7 +608,7 @@ input {
 
 .owl-carousel .owl-next:hover,
 .owl-carousel .owl-prev:hover {
-  background: #C1B086 !important;
+  background: #2196f36b !important;
 }
 
 /*--------------gallary--------*/
@@ -621,7 +621,7 @@ input {
 /*--------------footer--------*/
 /* استايل الفوتر */
 .footer {
-  background-color: #a46406;
+  background-color: #2196F3;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -864,7 +864,7 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
-  background-color: #a46406;
+  background-color: #2196F3;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -897,7 +897,7 @@ input {
   font-size: 2.8em;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #a46406;
+  color: #2196F3;
   text-transform: uppercase;
   letter-spacing: 2px;
   animation: fadeInDown 1s ease-in-out;
@@ -922,7 +922,7 @@ input {
 /* Facility Card */
 .facility-card {
   background: white;
-  color: #a46406;
+  color: #2196F3;
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -957,7 +957,7 @@ input {
   padding: 12px 24px;
   font-size: 1.2em;
   color: white;
-  background: #887401;
+  background: #2196F3;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -966,7 +966,7 @@ input {
 }
 
 .btn:hover {
-  background: #a46406;
+  background: #2196F3;
   transform: scale(1.05);
 }
 
@@ -1059,7 +1059,7 @@ left: 0;
 
 
   .book-btn {
-    background-color: #a46406;
+    background-color: #2196F3;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -1071,7 +1071,7 @@ left: 0;
   }
 
   .book-btn:hover {
-    background-color: #a46406;
+    background-color: #2196F3;
   }
 
 
