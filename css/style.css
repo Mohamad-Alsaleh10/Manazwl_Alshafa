@@ -32,8 +32,8 @@ a {
 
 /*--------------header--------*/
 header {
-  height: 16vh;
-  background: white;
+  height: 15vh;
+  background: rgb(255, 255, 255);
   color: black;
   position: sticky;
   top: 0;

@@ -94,7 +94,7 @@ header {
   }
   
   header ul li a:hover {
-    color: #C1B086;
+    color: #2196f36b;
   }
   @media only screen and (max-width: 768px) {
     .header{
